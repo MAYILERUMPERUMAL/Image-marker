@@ -41,10 +41,10 @@ const MeasureLine = ({
   *  Dimesion line functionality starts here ======>
   */
 
-  const calculateLineLength = (startX, startY, endX, endY) =>
+  const calculateLineLength = (startX:number, startY:number, endX:number, endY:number) =>
     Math.sqrt(Math.pow(endX - startX, 2) + Math.pow(endY - startY, 2));
 
-  const createPanResponder = (lineIndex, type) => {
+  const createPanResponder = (lineIndex:number, type:string) => {
     return PanResponder.create({
       onMoveShouldSetPanResponder: () => true,
       onPanResponderMove: (e, gestureState) => {
